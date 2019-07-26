@@ -1,0 +1,198 @@
+body {
+  font-family: 'Open Sans', sans-serif;
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+}
+
+a {
+  color: #007aeb;
+  text-decoration: underline;
+}
+
+.dosage-calculator-outer {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 10px;
+}
+
+.dosage-calculator-container .dosage-cal-header {
+  padding: 1.25em;
+  text-align: center;
+  background: #284eac;
+  background: -webkit-gradient(linear, left top, right top, from(#284eac), to(#22abc7));
+  background: linear-gradient(90deg, #284eac 0%, #22abc7 100%);
+  color: #ffffff;
+  border-radius: 10px 10px 0 0;
+}
+
+.dosage-calculator-container .dosage-cal-header .cal-title {
+  font-size: 28px;
+  font-weight: 600;
+}
+
+.dosage-calculator-container .dosage-cal-header .cal-subtitle {
+  font-size: 18px;
+}
+
+.dosage-calculator-container .dosage-cal-body {
+  padding: 0 1.25em;
+  border: 1px solid #333;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.dosage-calculator-container .dosage-cal-field {
+  border-bottom: 1px solid #efefef;
+  margin-bottom: 0.5em;
+  padding: 1.5em 0;
+}
+
+.dosage-calculator-container .dosage-cal-field-title {
+  font-size: 18px;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 1em;
+}
+
+.dosage-calculator-container .dosage-cal-field-title span {
+  font-weight: 400;
+}
+
+.dosage-calculator-container .dosage-cal-result-wrappper {
+  margin-top: 2em;
+}
+
+.dosage-calculator-container .dosage-cal-result {
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  background: #dddddd;
+  background: -webkit-gradient(linear, left top, left bottom, from(#dddddd), to(white));
+  background: linear-gradient(180deg, #dddddd 0%, white 100%);
+  padding: 0.5em;
+  text-align: center;
+  font-size: 28px;
+  color: #183783;
+  width: 250px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.dosage-calculator-container .dosage-cal-footer {
+  padding: 1.5em 0;
+  font-size: 13px;
+}
+
+.dosage-calculator-container .warning {
+  color: red;
+}
+
+.dosage-calculator-container .dosage-cal-brand {
+  padding-top: 1.5em;
+  padding-bottom: 1.5em;
+  text-align: center;
+}
+
+.dosage-calculator-container .dosage-cal-embed {
+  text-align: center;
+  font-size: 13px;
+}
+
+.dosage-calculator-container #dosage-cal-embed-codes {
+  margin-top: 10px;
+}
+
+.dosage-calculator-container #dosage-cal-embed-codes textarea {
+  padding: 1em;
+  width: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  resize: none;
+}
+
+/* MIXINS */
+.dosage-cal-field-radio {
+  margin: 0 0 1.5rem;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-size: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+}
+
+.dosage-cal-field-radio input {
+  width: 0;
+  height: 0;
+  position: absolute;
+  left: -9999px;
+}
+
+.dosage-cal-field-radio input + label {
+  margin: 0 10px;
+  padding: .75rem .5rem;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  position: relative;
+  display: inline-block;
+  border: solid 1px #dedede;
+  background-color: #ffffff;
+  font-size: 14px;
+  line-height: 140%;
+  text-align: center;
+  -webkit-box-shadow: 0 0 0 rgba(255, 255, 255, 0);
+          box-shadow: 0 0 0 rgba(255, 255, 255, 0);
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 6px;
+  -webkit-transition: border-color .15s ease-out,  color .25s ease-out,  background-color .15s ease-out, -webkit-box-shadow .15s ease-out;
+  transition: border-color .15s ease-out,  color .25s ease-out,  background-color .15s ease-out, -webkit-box-shadow .15s ease-out;
+  transition: border-color .15s ease-out,  color .25s ease-out,  background-color .15s ease-out, box-shadow .15s ease-out;
+  transition: border-color .15s ease-out,  color .25s ease-out,  background-color .15s ease-out, box-shadow .15s ease-out,  -webkit-box-shadow .15s ease-out;
+  cursor: pointer;
+  /* ADD THESE PROPERTIES TO SWITCH FROM AUTO WIDTH TO FULL WIDTH */
+  /*flex: 0 0 50%; display: flex; justify-content: center; align-items: center;*/
+  /* ----- */
+}
+
+.dosage-cal-field-radio input + label:first-of-type {
+  margin-left: 0;
+}
+
+.dosage-cal-field-radio input + label:last-of-type {
+  margin-right: 0;
+}
+
+.dosage-cal-field-radio input:hover + label {
+  border-color: #ccc;
+}
+
+.dosage-cal-field-radio input:checked + label {
+  background-color: #66B3FB;
+  color: #ffffff;
+  -webkit-box-shadow: 0 0 10px rgba(102, 179, 251, 0.5);
+          box-shadow: 0 0 10px rgba(102, 179, 251, 0.5);
+  border-color: #66B3FB;
+  z-index: 1;
+}
+/*# sourceMappingURL=styles.css.map */

@@ -1,0 +1,46 @@
+@import "../../node_modules/bulma/sass/utilities/initial-variables";
+@import "../../node_modules/bulma/sass/utilities/functions";
+
+$family-sans-serif: "Roboto", sans-serif;
+
+$radius-small: 4px;
+$radius: 6px;
+$radius-large: 8px;
+
+
+
+$primary: $black;
+$link: $red;
+
+$navbar-background-color: #1c091a;
+$navbar-height: 6.8rem;
+$navbar-item-img-max-height: 4rem;
+$navbar-item-color:$white-ter;
+$navbar-item-hover-color: $white; 
+$navbar-item-hover-background-color: transparent;
+$navbar-breakpoint: $tablet; 
+$button-border-width: 1px; 
+
+$button-padding-vertical: calc(0.75em - #{$button-border-width}) !default
+$button-padding-horizontal: 2em;
+
+
+$size-7: 0.75rem;
+
+$input-border-color: $grey-lighter;
+$input-shadow: none;
+$input-radius: 0px;
+$input-hover-border-color: $grey-lighter;
+
+$label-color:$red;
+$label-weight: 400;
+
+$file-border-color: $grey-lighter;
+$file-radius: 0;
+$file-cta-background-color: transparent;
+$file-cta-color: $white;
+$file-cta-hover-color: $white;
+$file-cta-active-color: $white;
+ 
+// 6. Import the rest of Bulma
+@import "../../node_modules/bulma/bulma";

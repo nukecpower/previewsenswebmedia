@@ -1,0 +1,183 @@
+body {
+    font-family: 'Open Sans', sans-serif;
+    margin:0; padding:0; 
+    font-size: 16px;
+}
+
+a {
+    color: #007aeb; 
+    text-decoration: underline; 
+}
+
+.dosage-calculator-outer {
+    max-width: 600px; 
+    margin: 0 auto; 
+    padding: 10px; 
+}
+
+.dosage-calculator-container {
+    
+
+    .dosage-cal-header {
+        padding: 1.25em; 
+        text-align: center; 
+        background: rgb(40,78,172);
+        background: linear-gradient(90deg, rgba(40,78,172,1) 0%, rgba(34,171,199,1) 100%);
+        color: #ffffff; 
+        border-radius: 10px 10px 0 0; 
+
+        .cal-title {
+            font-size: 28px; 
+            font-weight: 600; 
+        }
+
+        .cal-subtitle {
+            font-size: 18px;
+        }
+    }
+
+    .dosage-cal-body {
+        padding: 0 1.25em; 
+        border:1px solid #333; 
+        box-sizing: border-box; 
+    }
+
+    .dosage-cal-field {
+        &-title {
+            font-size: 18px; 
+            font-weight: 600; 
+            text-align: center; 
+            margin-bottom: 1em; 
+            span {
+                font-weight: 400; 
+            }    
+        }
+
+        border-bottom: 1px solid #efefef;
+        margin-bottom: 0.5em; 
+        padding: 1.5em 0; 
+    }
+
+    .dosage-cal-result-wrappper {
+        margin-top: 2em; 
+    }
+
+    .dosage-cal-result {
+        border-radius: 6px; 
+        border:1px solid #ccc; 
+        background: rgb(221,221,221);
+        background: linear-gradient(180deg, rgba(221,221,221,1) 0%, rgba(255,255,255,1) 100%);
+        padding: 0.5em; 
+        text-align: center; 
+        font-size: 28px; 
+        color: #183783; 
+        width: 250px;
+        margin-left: auto; 
+        margin-right: auto; 
+    }
+
+    .dosage-cal-footer {
+        padding: 1.5em 0; 
+        font-size: 13px; 
+    }
+
+    .warning {
+        color: red; 
+    }
+
+
+    .dosage-cal-brand {
+        padding-top: 1.5em; 
+        padding-bottom: 1.5em; 
+        text-align: center; 
+    }
+
+    .dosage-cal-embed {
+        text-align: center; 
+        font-size: 13px; 
+        
+    }
+
+    #dosage-cal-embed-codes {
+        margin-top: 10px; 
+        textarea {
+            padding: 1em;
+            width: 100%; 
+            box-sizing: border-box; 
+            resize: none; 
+        }
+    }
+}
+
+
+ 
+ 
+$defaultBgColor: #ffffff; 
+$activeBgColor:  #66B3FB; 
+
+$activeTextColor: #ffffff; 
+
+$bordercolorDefault: #dedede; 
+$bordercolorHover: #ccc; 
+$bordercolorActive: #66B3FB; 
+
+/* MIXINS */
+ 
+ 
+
+@mixin breakpoint($point) {
+	@if $point == 1100 {
+		@media (max-width: 1100px) { @content ; }
+	}
+	@else if $point == 800 {
+		@media (max-width: 800px) { @content ; }
+	}
+}
+
+.dosage-cal-field-radio {
+	margin: 0 0 1.5rem; box-sizing: border-box;
+	font-size: 0;
+	display: flex; flex-flow: row nowrap;
+    justify-content: flex-start; align-items: stretch;
+    
+	input {
+        width: 0; height: 0; position: absolute; left: -9999px;
+    }
+
+	input + label {
+		margin: 0 10px; padding: .75rem .5rem; box-sizing: border-box;
+		position: relative; display: inline-block;
+        border: solid 1px $bordercolorDefault; 
+        background-color: $defaultBgColor;
+        font-size: 14px; line-height: 140%; 
+        text-align: center;
+        box-shadow: 0 0 0 rgba(255,255,255,0);
+        flex: 1; 
+        display: flex;
+        align-items: center;
+        justify-content: center; 
+        border-radius: 6px; 
+		transition: 	border-color .15s ease-out, 
+					color .25s ease-out, 
+					background-color .15s ease-out,
+					box-shadow .15s ease-out;
+		cursor: pointer; 
+		/* ADD THESE PROPERTIES TO SWITCH FROM AUTO WIDTH TO FULL WIDTH */
+		/*flex: 0 0 50%; display: flex; justify-content: center; align-items: center;*/
+		/* ----- */
+		
+		&:first-of-type { margin-left: 0; }
+		&:last-of-type { margin-right: 0; }
+	}
+    
+    input:hover + label {border-color: $bordercolorHover}
+    
+	input:checked + label {
+		background-color: $activeBgColor;
+		color: $activeTextColor;
+		box-shadow: 0 0 10px rgba($activeBgColor, .5);
+		border-color: $bordercolorActive;
+		z-index: 1;
+	}
+}
+ 

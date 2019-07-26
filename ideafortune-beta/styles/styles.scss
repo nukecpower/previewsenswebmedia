@@ -1,0 +1,15 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900");
+
+@import "partials/variables";
+@import "partials/funcs";
+@import "partials/mixins";
+
+@import "plugins/bulma";
+@import "plugins/animate";
+ 
+@import "plugins/jquery.fancybox";
+@import "plugins/owlcarousel";
+
+ 
+@import "components/components";
+
