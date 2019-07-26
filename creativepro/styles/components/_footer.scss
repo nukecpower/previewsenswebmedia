@@ -1,0 +1,12 @@
+footer {
+  font-size: pxToEm(12);
+  padding: pxToEm(20, 12) 0;
+  background-color: #fff;
+  .social-icons {
+    font-size: pxToEm(16, 12);
+    > a {
+      display: inline-block;
+      margin: 0 pxToEm(6);
+    }
+  }
+}

@@ -1,0 +1,332 @@
+#about {
+  
+  background-size: cover;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+
+  .fp-bg {
+    background-image: url("../images/charcoal-bg.jpg");
+    background-size: cover;
+    background-position: center 80%;
+  }
+}
+
+.about {
+  position: relative;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  width: 100%; 
+
+  .columns {
+    align-items: center;
+  }
+
+  @include mq-min ($tablet + 1px) {
+    .video-frame {
+      margin-left: 3em; 
+    }
+  }
+    
+
+  .section-title {
+    font-size: pxToEm(70);
+
+    @include mq-max ($desktop) {
+      font-size: pxToEm(60);
+    }
+
+    @include mq-max ($tablet) {
+      font-size: pxToEm(50);
+    }
+
+    @include mq-max ($mobile) {
+      font-size: pxToEm(42);
+    }
+  }
+
+  &-intro {
+    margin-bottom: 1.5em; 
+    @include mq-min($desktop) {
+      font-size: pxToEm(20);
+    }
+  }
+
+  @include mq-min($tablet + 1px) {
+    min-height: 100vh;
+  }
+}
+
+
+.about-services {
+  text-align: center; 
+  align-items: center;
+  flex-wrap: wrap; 
+  display:  flex; 
+
+
+  .about-services-col {
+    width: 50%;
+    @include mq-max ($tablet) {
+      width: 25%; 
+    }
+
+    @include mq-max ($mobile) {
+      width: 50%; 
+    }
+  }
+}
+
+
+.about-service-icon {
+  margin: 1em 2em 0 2em; 
+
+  img {
+    max-width: 100px; height: auto; 
+
+    @include mq-max ($tablet) {
+      max-width: 60px;
+    }
+
+  }
+}
+
+.about-service-label {
+  color: $white; 
+  margin-bottom: 1em; 
+}
+
+
+.section-startproject {
+  display: flex;
+  align-items: center; 
+  position: relative; 
+  overflow: hidden;
+
+  .section-startproject-content {
+    display: flex;
+    align-items: center; 
+    height: 100%; 
+    z-index: 4;
+    width: 100%;
+    left: 0;
+    top: 0; 
+  }
+
+
+  .section-title {
+    font-size: pxToEm(72);
+    font-weight: 200; 
+    margin-bottom: pxToEm(15, 72);
+    line-height: 1.25em; 
+    color: $white; 
+
+    @include mq-max ($desktop) {
+      font-size: pxToEm(58);
+    }
+
+    @include mq-max ($tablet) {
+      font-size: pxToEm(42);
+    }
+
+    @include mq-max ($mobile) {
+      font-size: pxToEm(30);
+    }
+  }
+
+
+  .beautiful-quote {
+    font-size: pxToEm(28);
+    color: $white; 
+    margin-bottom: pxToEm(50, 28);
+    font-weight: 200; 
+
+    @include mq-max ($desktop) {
+      font-size: pxToEm(22);
+    }
+
+    @include mq-max ($tablet) {
+      font-size: pxToEm(18);
+    }
+
+    @include mq-max ($mobile) {
+      font-size: pxToEm(16);
+    }
+  }
+    
+  #cpro-videobg {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    top:0;
+    right:0;
+    width: 100%;
+    height: 100%;
+    background-size: 100% 100%;
+    background-color: black;  
+    background-position: center center;
+    background-size: contain;
+    object-fit: cover; 
+    z-index:3;
+  }
+
+
+  .video-overlay {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    top:0;
+    right:0;
+    width: 100%;
+    height: 100%;
+    z-index:4;
+    background-color: rgba(71, 10, 82, 0.85);
+  }
+
+    
+  video::-webkit-media-controls {
+    display:none !important;
+  }
+
+}
+
+
+.getstarted-form {
+  .initial-button {
+    border: 2px solid $white; 
+    font-size: pxToEm(28);
+    background: transparent; 
+    border-radius: 0; 
+    font-weight: 200; 
+    padding-left: 2em; 
+    padding-right: 2em; 
+    color: $white; 
+    &:hover {
+      color: $white; 
+    }
+
+    @include mq-max ($desktop) {
+      font-size: pxToEm(24);
+    }
+
+    @include mq-max ($tablet) {
+      font-size: pxToEm(20);
+    }
+  }
+
+
+  .getstarted-form-outer {
+    display: flex; 
+    max-width: 800px;
+    margin: 0 auto; 
+    align-items: center; 
+    opacity: 0;  
+    display: none; 
+  } 
+
+
+  .getstarted-form-back {
+    width: 50px; 
+    text-align: center; 
+    position: relative;
+    a {
+      opacity: 0.76;
+      transition: all .5s ease-in; 
+      color: #ffffff;
+      padding-top: 1em; 
+      padding-bottom: 1em; 
+      &:hover {
+        opacity: 1;
+        color: #ffffff;
+      }
+    }
+
+    @include mq-max ($mobile) {
+      width: 25px; 
+    }
+  }
+
+  .getstarted-form-box {
+    border:2px solid #ffffff;
+    flex-grow: 1; 
+    display: flex;
+    margin-right: 50px; 
+   
+    @include mq-max ($mobile) {
+      display: block;
+      margin-right: 25px; 
+    }
+
+    .fields-wrapper {
+      flex-grow: 1; 
+      margin:0; 
+      padding: 1.5em; 
+      @include mq-max ($mobile) {
+       padding: 1em; 
+      }
+      
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="text"]:focus,
+    input[type="email"]:focus {
+      border: none;
+      border-bottom: 1px solid rgba(255,255,255,0.7) ;
+      background: transparent; 
+      color: $white; 
+      box-shadow: none; 
+      @include mq-min ($desktop) {
+        font-size: pxToEm(20);
+      }
+    }
+
+    .field-label {
+      text-align: left; 
+      color: $white; 
+      padding-left: calc(0.625em - 1px); 
+
+      @include mq-min ($desktop) {
+        font-size: pxToEm(16);
+      }
+    }
+
+    .field-submit {
+      width: 120px; 
+      color: #ffffff; 
+      background-color: #8C14A0; 
+      flex: 0 1 auto;
+      display: flex; 
+      align-items: center; 
+      justify-content: center; 
+      position: relative; 
+
+      @include mq-max ($mobile) {
+        display: block;
+        width: 100%; 
+      }
+
+      button {
+        background: transparent; 
+        color: $white; 
+        border: none; 
+        position: absolute; 
+        top: 0; left: 0; 
+        width: 100%; 
+        height: 100%;
+        font-size: pxToEm(16);
+
+        @include mq-max ($mobile) {
+          display: block;
+          position: relative;
+        }
+      }
+    }
+  }
+ 
+}
+
+ 
+
+

@@ -1,0 +1,229 @@
+#section-hero {
+  .fp-bg {
+    background-image: url("../images/hero-v2-bg.jpg");
+  }
+
+}
+
+.hero-v2 {
+  width: 100%;
+  height: 100vh;
+ 
+  background-size: cover; 
+  background-position: right center;
+  display: -ms-flex;
+  display: -webkit-flex;
+  display: flex;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  
+  &-col-first,
+  &-col-second {
+    width: 50%;
+  }
+
+  .hero-v2-container {
+    max-width: 1280px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+  }
+
+  @include mq-max($tablet) {
+    &-col-second {
+      display: none;
+    }
+    &-col-first {
+      width: 85%;
+      margin: 0 auto;
+    }
+  }
+
+  .hero-v2-barker {
+    position: relative;
+    margin-top: 2em;
+     
+    @include mq-max(560px) {
+      margin-top: 0;
+    }
+
+    .hero-v2-button {
+      text-align: center;
+      padding-top: pxToEm(18);
+      font-weight: 400;
+       
+      
+      strong {
+        font-weight: 700;
+        color: #fff;
+      }
+    }
+    .div-content {
+      z-index: 1;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 50;
+      top: 35%;
+      left: 20%;
+      
+      @include mq-max(480px) {
+        left: 5%;
+        top: 32%;
+      }
+    }
+
+    .hero-v2-line-1 {
+      font-family: "Muli";
+      font-size: pxToEm(70);
+      font-weight: 600;
+       
+      color: #fff;
+      position: relative;
+      line-height: 1.25em; 
+ 
+      @include mq-max(1024px) {
+        font-size: pxToEm(52);
+      }
+
+      @include mq-max($tablet) {
+        font-size: pxToEm(62);
+      }
+
+      @include mq-max(560px) {
+        font-size: pxToEm(52);
+      }
+
+      @include mq-max(480px) {
+        font-size: pxToEm(56);
+      }
+
+      @include mq-max(400px) {
+        font-size: pxToEm(42);
+      }
+      strong {
+        font-weight: 700;
+        color: #fff;
+      }
+
+      span {
+        display: inline-block;
+        position: relative;
+      }
+    }
+
+    .hero-v2-line-2 {
+      font-family: "Muli";
+      font-size: pxToEm(26);
+      font-weight: 300;
+       
+      text-align: center; 
+      color: #fff;
+      position: relative;
+      
+      @include mq-max(1024px) {
+        font-size: pxToEm(22);
+      }
+
+
+      @include mq-max(400px) {
+        font-size: pxToEm(16);
+      }
+      
+      span {
+        border-top: 2px solid #fff;
+        display: inline-block;
+      
+        @include mq-min(1025px) {
+          padding-left: 1em; 
+         padding-right: 1em; 
+        }
+      }
+    }
+
+    .div-bg {
+ 
+      img {
+        max-width: 95%;
+        height: auto;
+        text-align: center;
+
+        @include mq-max($tablet) {
+          max-width: 100%;
+        }
+      }
+    }
+  }
+}
+
+.hero-v2-graphic {
+  text-align: center;
+  img {
+    max-width: 80%;
+    height: auto;
+  }
+}
+
+  
+//*** END HERO V2 **/
+
+.button {
+  transition: all 0.3s ease 0s;
+ 
+  color: $purple;
+  &.btn-gradient {
+    background: linear-gradient(
+      116deg,
+      #A403B1,
+      #F91DC5
+    );
+  }
+
+  &.button-hero {
+    font-size: pxToEm(26);
+    color: #ffffff;
+    padding-top: calc(1.25em - 1px);
+    padding-bottom: calc(1.25em - 1px);
+    padding-left: 2em;
+    border: none;
+    padding-right: 2em;
+    font-weight: 300;
+    box-shadow: 0px 2px 5px 5px rgba(0, 0, 0, 0.25);
+
+    strong {
+      font-weight: 400; 
+    }
+
+    @include mq-min($tablet + 1px) {
+      font-size: pxToEm(24);
+    }
+
+    @include mq-max(768px) {
+      font-size: pxToEm(28);
+    }
+
+    @include mq-max(560px) {
+      font-size: pxToEm(22);
+    }
+
+    @include mq-max(480px) {
+      font-size: pxToEm(20);
+    }
+
+    &:hover {
+      box-shadow: 0px 2px 5px 5px rgba(0, 0, 0, 0.3);
+    }
+  }
+
+  &.button-hero-outline {
+    background-color: transparent;
+    font-weight: 300;
+    &:hover {
+      background-color: $hotpink;
+    }
+  }
+}
+ 

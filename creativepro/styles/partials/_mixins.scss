@@ -1,0 +1,31 @@
+@mixin mq($key, $value) {
+  @media screen and ($key: $value) {
+    @content;
+  }
+}
+
+@mixin mq-min($width) {
+  @include mq(min-width, $width) {
+    @content;
+  }
+}
+
+@mixin mq-max($width) {
+  @include mq(max-width, $width) {
+    @content;
+  }
+}
+
+@keyframes dash {
+  to {
+      stroke-dashoffset: 0
+  }
+}
+
+@keyframes paint {
+  to {
+      stroke-width: 0;
+      fill: #D217B8; 
+  }
+}
+

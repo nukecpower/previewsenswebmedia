@@ -1,0 +1,63 @@
+@import "../../node_modules/bulma/sass/utilities/initial-variables";
+@import "../../node_modules/bulma/sass/utilities/functions";
+
+$family-sans-serif: "Muli", sans-serif;
+
+$radius-small: 3px;
+$radius: 6px;
+$radius-large: 8px;
+
+$hotpink: #e42191;
+$purple: #953a8c;
+$lightpink: #f965ba;
+
+$primary: $purple;
+$link: $hotpink;
+
+$navbar-background-color: #1c091a;
+$navbar-height: 4.625rem;
+$navbar-item-img-max-height: 3.275rem;
+$navbar-item-color: $white-ter; 
+$navbar-item-hover-color: $white; 
+$navbar-item-hover-background-color: transparent; 
+ 
+ 
+
+$size-7: 0.75rem;
+
+$input-border-color: $lightpink;
+$input-shadow: none;
+$input-radius: 0px;
+$input-hover-border-color: $lightpink;
+
+$label-color:$white;
+$label-weight: 300;
+
+$file-border-color: $lightpink;
+$file-radius: 0;
+$file-cta-background-color: transparent;
+$file-cta-color: $white;
+$file-cta-hover-color: $white;
+$file-cta-active-color: $white;
+
+$file-name-border-color: $lightpink;
+
+$tabs-border-color: #e71ad1;
+
+$tabs-border-bottom-color: $tabs-border-color;
+$tabs-link-color: #fff;
+$tabs-link-hover-color: #bc11ad;
+
+$tabs-link-active-border-bottom-color: $link !default;
+$tabs-link-active-color: #e71ad1 !default;
+
+$tabs-boxed-link-radius: 0 !default;
+$tabs-boxed-link-hover-background-color: transparent !default;
+$tabs-boxed-link-hover-border-bottom-color: $tabs-border-color !default;
+
+$tabs-boxed-link-active-background-color: #1b1d1e;
+$tabs-boxed-link-active-border-color: $tabs-border-color;
+$tabs-boxed-link-active-border-bottom-color: transparent;
+
+// 6. Import the rest of Bulma
+@import "../../node_modules/bulma/bulma";
