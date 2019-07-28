@@ -16519,9 +16519,7 @@ nav input:checked ~ #mobilemenu {
 }
 
 .mobile-menu-container .mobile-menu-middle {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
+  height: 80vh;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -16542,6 +16540,12 @@ nav input:checked ~ #mobilemenu {
   transition: transform .3s ease, -webkit-transform .3s ease;
 }
 
+@media screen and (max-width: 480px) {
+  .mobile-menu-container .mobile-menu-middle ul li {
+    font-size: 22px;
+  }
+}
+
 .mobile-menu-container .mobile-menu-middle ul li a {
   color: #ffffff;
   font-weight: 300;
@@ -16557,7 +16561,9 @@ nav input:checked ~ #mobilemenu {
 }
 
 .mobile-menu-bottom {
-  height: 80px;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
   text-align: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
