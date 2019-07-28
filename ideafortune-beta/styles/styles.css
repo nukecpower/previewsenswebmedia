@@ -16498,7 +16498,7 @@ nav input:checked ~ #mobilemenu {
 }
 
 .mobile-menu-container .mobile-logo {
-  height: 40px;
+  height: 35px;
   width: auto;
 }
 
@@ -16515,11 +16515,11 @@ nav input:checked ~ #mobilemenu {
 }
 
 .mobile-menu-container .mobile-menu-top {
-  height: 95px;
+  height: 90px;
 }
 
 .mobile-menu-container .mobile-menu-middle {
-  height: 80vh;
+  margin-top: 5em;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;

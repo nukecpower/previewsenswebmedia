@@ -218,7 +218,7 @@ nav {
   flex-direction: column; 
 
   .mobile-logo {
-    height: 40px; width: auto; 
+    height: 35px; width: auto; 
   }
 
   .mobile-menu-top,
@@ -228,11 +228,11 @@ nav {
     align-items: center; 
   }
   .mobile-menu-top {
-    height: 95px; 
+    height: 90px; 
   }
 
   .mobile-menu-middle {
-    height: 80vh; 
+    margin-top: 5em; 
     justify-content: center; 
     ul {
       width: 100%; 
