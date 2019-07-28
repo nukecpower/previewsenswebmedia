@@ -116,9 +116,7 @@
       justify-content: center; 
     }
 
-    @include mq-max ($mobile) {
-      justify-content: space-between; 
-    }
+     
   }
 
   &-list-item {
@@ -128,14 +126,30 @@
 
     .feature-icon {
       margin-bottom: .5em; 
+      img {
+        display: block; 
+      
+      }
+    }
+
+    .feature-name {
+      @include mq-max ($mobile) {
+        font-size: pxToEm(15);
+      }
     }
 
     @include mq-max ($tablet) {
-      width: 30%; margin: 1% 1.5% 3% 1.5%; 
+      width: 30%; margin: 1% 1.5% 7% 1.5%; 
     }
 
     @include mq-max ($mobile) {
-      width: 44%; margin: 1% 2.5% 3% 2.5%; 
+      width: 44%; margin: 1% 5% 7% 5%; 
+      &:nth-child(odd) {
+        margin-left: 0; 
+      }
+      &:nth-child(even) {
+        margin-right: 0; 
+      }
     }
   }
 
