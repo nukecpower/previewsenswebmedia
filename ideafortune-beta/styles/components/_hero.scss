@@ -1,281 +1,90 @@
-.hero-v2 {
-  width: 100%;
-  height: 100vh;
-  background: url("../images/hero-v2-bg.jpg") no-repeat;
+.home-intro {
+  background: #151515 url(../images/intro-bg.jpg) no-repeat center bottom;
+  background-size: auto;
   background-size: cover;
-  background-position: right center;
-  display: -ms-flex;
-  display: -webkit-flex;
-  display: flex;
-  align-items: center;
-  position: fixed;
-  top: 0;
-  left: 0;
-  &-col-first,
-  &-col-second {
-    width: 50%;
-  }
-
-  .hero-v2-container {
-    max-width: 1140px;
-    margin: 0 auto;
-    display: flex;
-    align-items: center;
-  }
-
-  @include mq-max($tablet) {
-    &-col-second {
-      display: none;
-    }
-    &-col-first {
-      width: 85%;
-      margin: 0 auto;
-    }
-  }
-
-  .hero-v2-barker {
-    position: relative;
-    margin-top: 2em;
-
-    @include mq-max(560px) {
-      margin-top: 0;
-    }
-
-    .hero-v2-button {
-      text-align: center;
-      padding-top: pxToEm(40);
-      font-weight: 400;
-      strong {
-        font-weight: 700;
-        color: #fff;
-      }
-    }
-    .div-content {
-      z-index: 1;
-      transform-style: preserve-3d;
-      position: absolute;
-      top: 0;
-      left: 0;
-      z-index: 0;
-      top: 36%;
-      left: 30%;
-
-      @include mq-max(360px) {
-        left: 15%;
-        top: 32%;
-      }
-    }
-
-    .hero-v2-line-1 {
-      font-family: "Montserrat";
-      font-size: pxToEm(30);
-      font-weight: 300;
-      color: #fff;
-      position: relative;
-      transform: translateZ(20px);
-      @include mq-max(1024px) {
-        font-size: pxToEm(22);
-      }
-
-      @include mq-max(768px) {
-        font-size: pxToEm(32);
-      }
-
-      @include mq-max(560px) {
-        font-size: pxToEm(26);
-      }
-
-      @include mq-max(480px) {
-        font-size: pxToEm(20);
-      }
-      strong {
-        font-weight: 700;
-        color: #fff;
-      }
-
-      span {
-        display: inline-block;
-        padding-bottom: pxToEm(40, 38);
-        border-bottom: 2px solid #fff;
-        left: 50%;
-        position: relative;
-        transform: translateX(-50%);
-      }
-    }
-
-    .div-bg {
-      img {
-        max-width: 90%;
-        height: auto;
-        text-align: center;
-
-        @include mq-max($tablet) {
-          max-width: 100%;
-        }
-      }
-    }
-  }
-}
-
-.hero-v2-graphic {
-  text-align: center;
-  img {
-    max-width: 80%;
-    height: auto;
-  }
-}
-
-.hero-v2-spacer {
+  width: 100%;
+  height: 100%;
   min-height: 100vh;
   position: relative;
-  z-index: -1;
-}
-
-@-webkit-keyframes buttonGradient {
-  0% {
-    background-position: 0% 35%;
-  }
-  50% {
-    background-position: 100% 66%;
-  }
-  100% {
-    background-position: 0% 35%;
-  }
-}
-@-moz-keyframes buttonGradient {
-  0% {
-    background-position: 0% 35%;
-  }
-  50% {
-    background-position: 100% 66%;
-  }
-  100% {
-    background-position: 0% 35%;
-  }
-}
-@keyframes buttonGradient {
-  0% {
-    background-position: 0% 35%;
-  }
-  50% {
-    background-position: 100% 66%;
-  }
-  100% {
-    background-position: 0% 35%;
-  }
-}
-
-//*** END HERO V2 **/
-
-.button {
-  transition: all 0.3s ease 0s;
-  font-family: "Montserrat";
-  color: $purple;
-  &.btn-gradient {
-    background: linear-gradient(
-      116deg,
-      #770c87,
-      #ec2cc1,
-      #770c87,
-      #ec2cc1,
-      #770c87,
-      #ec2cc1
-    );
-    background-size: 600% 600%;
-    -webkit-animation: buttonGradient 30s ease infinite;
-    -moz-animation: buttonGradient 30s ease infinite;
-    animation: buttonGradient 30s ease infinite;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  clip-path: polygon(0 0, 100% 0, 100% 85%, 0% 100%);
+  z-index: 0; 
+  margin-top: -5vh; 
+  margin-bottom: 5vh; 
+  .intro-overlay {
+      
   }
 
-  &.button-hero {
-    font-size: pxToEm(20);
-    color: #ffffff;
-    padding-top: calc(1.25em - 1px);
-    padding-bottom: calc(1.25em - 1px);
-    padding-left: 1.5em;
-    border: none;
-    padding-right: 1.5em;
-    font-weight: 400;
-    box-shadow: 0px 2px 5px 0px rgba(68, 68, 68, 0.5);
-    @include mq-min($tablet + 1px) {
+  .intro-container {
+    max-width: pxToEm(600);
+    margin-left: auto; 
+    margin-right: auto; 
+    
+    @include mq-max (650px) {
+      margin-left: 1em; 
+      margin-right: 1em; 
+    }
+    h1 {
+     font-size: pxToEm(64);
+     margin-bottom: pxToEm(15, 64);
+
+     @include mq-max ($tablet) {
+      font-size: pxToEm(54);
+     }
+
+     @include mq-max ($mobile) {
+      font-size: pxToEm(32);
+     }
+   } 
+
+    h2 {
       font-size: pxToEm(24);
+      font-weight: 300; 
+      margin-bottom: pxToEm(15, 24);
+
+      @include mq-max ($tablet) {
+        font-size: pxToEm(20);
+       }
+  
+       @include mq-max ($mobile) {
+        font-size: pxToEm(16);
+       }
     }
 
-    @include mq-max(768px) {
-      font-size: pxToEm(28);
-    }
-
-    @include mq-max(560px) {
-      font-size: pxToEm(22);
-    }
-
-    @include mq-max(480px) {
-      font-size: pxToEm(20);
-    }
-
-    &:hover {
-      box-shadow: 0px 2px 5px 0px rgba(68, 68, 68, 0.85);
+    strong {
+      color: $white;
+      font-weight: 500; 
     }
   }
 
-  &.button-hero-outline {
-    background-color: transparent;
-    font-weight: 300;
-    &:hover {
-      background-color: $hotpink;
-    }
+  .hero-button-holder {
+    margin-top: 3em;
   }
 }
 
-.hero-video {
+
+.home-screensliders {
+  margin-top: -25vh; 
   position: relative;
-  display: block;
-  video {
-    width: 100%;
-    max-width: 100%;
+  z-index: 1; 
+  text-align: center; 
+  
+ 
 
-    @include mq-max($tablet) {
-      position: relative;
-      transform: none;
-      left: 0;
-      top: 0;
-      display: block;
+  .screens-sliders {
+    background-color: $white; 
+    padding: 1em  1em  1em  1em;
+    border-radius: 10px; 
+    border:1px solid $grey-lighter; 
+    display: inline-block; 
+    max-width: 1000px; 
+
+    @include mq-max ($desktop-small) {
+      padding: 0.5em; 
     }
   }
-
-  @include mq-min($tablet + 1px) {
-    position: fixed;
-    bottom: 0;
-    right: 0;
-    height: auto;
-    width: auto;
-    min-height: 100%;
-    min-width: 100%;
-    z-index: 0;
-    background-color: $black;
-  }
 }
-
-.hero-video-wrapper {
-  @include mq-min($tablet + 1px) {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    width: 100%;
-    height: 100%;
-  }
-}
-
-.hero-video-content {
-  width: 100%;
-  text-align: center;
-  position: absolute;
-  bottom: 1em;
-  z-index: 1;
-  left: 50%;
-  transform: translateX(-50%);
-
-  @include mq-min($tablet + 1px) {
-    bottom: 5em;
-  }
-}
+ 
