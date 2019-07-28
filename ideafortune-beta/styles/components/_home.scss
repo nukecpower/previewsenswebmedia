@@ -112,6 +112,13 @@
     justify-content: space-between; 
     align-content: center; 
     margin: 1em 0; 
+    @include mq-max ($tablet) {
+      justify-content: center; 
+    }
+
+    @include mq-max ($mobile) {
+      justify-content: space-between; 
+    }
   }
 
   &-list-item {
@@ -121,6 +128,14 @@
 
     .feature-icon {
       margin-bottom: .5em; 
+    }
+
+    @include mq-max ($tablet) {
+      width: 30%; margin: 1% 1.5% 3% 1.5%; 
+    }
+
+    @include mq-max ($mobile) {
+      width: 44%; margin: 1% 2.5% 3% 2.5%; 
     }
   }
 
@@ -499,7 +514,6 @@
         margin-right: 2em;
       }
     }
-    
   }
 
   .field-input {

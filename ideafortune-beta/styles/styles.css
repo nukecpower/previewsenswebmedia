@@ -16717,6 +16717,22 @@ nav input:checked ~ #mobilemenu {
   margin: 1em 0;
 }
 
+@media screen and (max-width: 800px) {
+  .features-list {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .features-list {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+
 .features-list-item {
   width: 18%;
   margin: 1%;
@@ -16725,6 +16741,20 @@ nav input:checked ~ #mobilemenu {
 
 .features-list-item .feature-icon {
   margin-bottom: .5em;
+}
+
+@media screen and (max-width: 800px) {
+  .features-list-item {
+    width: 30%;
+    margin: 1% 1.5% 3% 1.5%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .features-list-item {
+    width: 44%;
+    margin: 1% 2.5% 3% 2.5%;
+  }
 }
 
 .features-bottom {
@@ -17447,5 +17477,9 @@ footer .social-icons {
 footer .social-icons > a {
   display: inline-block;
   margin: 0 0.375em;
+}
+
+body {
+  overflow: unset;
 }
 /*# sourceMappingURL=styles.css.map */
