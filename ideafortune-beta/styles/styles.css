@@ -16739,10 +16739,12 @@ nav input:checked ~ #mobilemenu {
 
 .features-list-item .feature-icon {
   margin-bottom: .5em;
+  text-align: center;
 }
 
 .features-list-item .feature-icon img {
-  display: block;
+  display: inline-block;
+  max-width: 70px;
 }
 
 @media screen and (max-width: 480px) {
