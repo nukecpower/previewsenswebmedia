@@ -12,12 +12,10 @@
   flex-direction: column;
   clip-path: polygon(0 0, 100% 0, 100% 85%, 0% 100%);
   z-index: 0; 
-  margin-top: -5vh; 
+  margin-top: -14vh; 
   margin-bottom: 5vh; 
-  .intro-overlay {
-      
-  }
 
+ 
   .intro-container {
     max-width: pxToEm(600);
     margin-left: auto; 

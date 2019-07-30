@@ -14,5 +14,9 @@
 @import "components/components";
 
 body {
-    overflow: unset; 
+    overflow: unset;
+}
+
+main {
+    min-height: 90vh; 
 }

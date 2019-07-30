@@ -6,4 +6,41 @@
 @import "get-started";
 @import "investors-intro";
 @import "footer";
+@import "inner-pages";
+@import "video";
 
+
+
+.section-type-a {
+    padding-top: 3em; 
+    padding-bottom: 3em; 
+
+    @include mq-min ($tablet) {
+        padding-top: 4em; 
+    padding-bottom: 4em; 
+
+    
+      }
+
+}
+
+
+.section-type-b {
+    padding-top: 3em; 
+    padding-bottom: 3em; 
+    background-color: #f1f1f1; 
+    @include mq-min ($tablet) {
+        padding-top: 4em; 
+    padding-bottom: 4em; 
+
+    
+      }
+
+}
+
+.section-has-gab-tablet {
+    @include mq-max ($tablet) {
+        margin-left: 1.5em;
+        margin-right: 1.5em; 
+    }
+}
