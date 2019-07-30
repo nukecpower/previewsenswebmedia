@@ -17515,8 +17515,10 @@ nav input:checked ~ #mobilemenu {
   margin-bottom: .5em;
 }
 
-.system-features {
-  padding-bottom: 0 !important;
+@media screen and (max-width: 1024px) {
+  .system-features {
+    padding-bottom: 0 !important;
+  }
 }
 
 .system-features .system-features-outer {

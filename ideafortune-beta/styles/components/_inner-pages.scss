@@ -39,7 +39,10 @@
 
 
 .system-features {
-    padding-bottom:0 !important; 
+    
+    @include mq-max ($desktop-small) {
+        padding-bottom:0 !important; 
+    }
     .system-features-outer {
         display: flex; 
         align-items: center; 
