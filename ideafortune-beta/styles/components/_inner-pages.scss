@@ -170,10 +170,10 @@
         padding: 1.5em; 
     }
     h5 {
-        font-size: pxToEm(32);
+        font-size: pxToEm(30);
         margin-bottom: .25em; 
         @include mq-max ($tablet) {
-            font-size: pxToEm(28);
+            font-size: pxToEm(26);
         }
 
         @include mq-max ($mobile) {
@@ -184,7 +184,7 @@
     p {
         font-size: pxToEm(18);
         @include mq-max ($tablet) {
-            font-size: pxToEm(16);
+            font-size: pxToEm(15);
         }
     }
 }

@@ -17681,13 +17681,13 @@ nav input:checked ~ #mobilemenu {
 }
 
 .ideafortune-comparison-box h5 {
-  font-size: 2em;
+  font-size: 1.875em;
   margin-bottom: .25em;
 }
 
 @media screen and (max-width: 800px) {
   .ideafortune-comparison-box h5 {
-    font-size: 1.75em;
+    font-size: 1.625em;
   }
 }
 
@@ -17703,7 +17703,7 @@ nav input:checked ~ #mobilemenu {
 
 @media screen and (max-width: 800px) {
   .ideafortune-comparison-box p {
-    font-size: 1em;
+    font-size: 0.9375em;
   }
 }
 
