@@ -39,10 +39,7 @@
 
 
 .system-features {
-    
-    @include mq-max ($desktop-small) {
-        padding-bottom:0 !important; 
-    }
+ 
     .system-features-outer {
         display: flex; 
         align-items: center; 
@@ -59,11 +56,11 @@
         background: #fff;
         box-shadow: 0px 4px 5px rgba(0,0,0,0.25);
         position: relative; 
-        left: 2.5em; 
+        left: 2em; 
         padding: 2em; 
 
         @include mq-max ($desktop-small) {
-            transform: translateY(-50%);
+            
             width: auto;
             box-sizing: border-box;
             left: 0;
@@ -72,8 +69,8 @@
         }
 
         @include mq-max ($tablet) {
-            margin-left: 1.5em;
-            margin-right: 1.5em;
+            margin-left: 0;
+            margin-right: 0;
         }
     }
 
@@ -83,10 +80,19 @@
             font-size: pxToEm(24);
             line-height: 1.25em;
             margin-bottom: pxToEm(10, 26);
+
+            @include mq-max ($tablet) {
+                font-size: pxToEm(20);
+            }
         }
  
         position: relative; 
 
+        p {
+            @include mq-max ($tablet) {
+                font-size: pxToEm(15);
+            }
+        }
         p:last-child {
             text-align:right;
             margin-top: 1.5em; 
@@ -99,7 +105,12 @@
 
     .component-rates-graphic {
         flex: 1; 
-         
+        box-shadow: 0px 4px 5px rgba(0,0,0,0.25);
+        padding-left: 2em;
+        background-color: #ffffff; 
+        img {
+            display: block;
+        }
     }
 }
 
@@ -159,7 +170,7 @@
         padding: 1.5em; 
     }
     h5 {
-        font-size: pxToEm(36);
+        font-size: pxToEm(32);
         margin-bottom: .25em; 
         @include mq-max ($tablet) {
             font-size: pxToEm(28);
