@@ -16324,6 +16324,13 @@ body.compensate-for-scrollbar {
   }
 }
 
+@media screen and (max-width: 800px) {
+  html.has-navbar-fixed-top,
+  body.has-navbar-fixed-top {
+    padding-top: 5.8rem;
+  }
+}
+
 .navmenu-container {
   display: block;
   width: 36px;
