@@ -9,6 +9,7 @@
         top: 1em; 
         right: 1em; 
         border:1px solid #ddd; 
+        background-color: rgba(255,255,255,0.95);
         margin:0; 
         .owl-next { border-right: 1px solid #ddd; }
 
@@ -58,7 +59,7 @@
     bottom: 50px; 
     z-index: 2; 
     background-color: $black; 
-    padding: 1.5em 1.5em 3.5em 1.5em; 
+    padding: 1.5em 1.5em 4em 1.5em; 
     color: #ffffff; 
     width: 55%; 
     @include mq-min ($desktop-small) {
@@ -76,7 +77,12 @@
     @include mq-max ($tablet) {
         position: relative; 
         bottom: 0; 
-        transform: translateY(-50%);
+        margin-top:-10em; 
+    }
+
+
+    @include mq-max ($mobile) {
+        margin-top:-5em; 
     }
 
     &.blog-post {
@@ -101,6 +107,10 @@
             @include mq-max ($desktop-small) {
                 font-size: pxToEm(26);
             }
+
+            @include mq-max ($tablet) {
+                font-size: pxToEm(22);
+            }
         }
 
 
@@ -110,8 +120,6 @@
             @include mq-min ($desktop-small) {
                 font-size: pxToEm(18);
             }
-
-            
         }
 
         .post-author {
@@ -137,6 +145,115 @@
 }
 
 
+.blog-entries {
+    margin-top: 2em; 
+    margin-bottom: 2em; 
+    @include mq-max ($tablet - 1px) {
+        margin-left: 1.5em;
+        margin-right: 1.5em; 
+    }
+}
+.blog-entries-outer { 
+    display: flex; 
+    margin-left: -2em;
+    margin-right: -2em; 
+    flex-wrap: wrap; 
+    @include mq-max ($tablet) {
+        margin-left: -1em;
+    margin-right: -1em; 
+    }
+}
+
+.blog-entry-item {
+    width: 33.33%;
+    padding-left: 2em; 
+    padding-right: 2em;  
+    margin-top: 2em; 
+    margin-bottom: 2em; 
+
+    @include mq-max ($desktop-small) {
+        width: 50%; 
+    }
+
+    @include mq-max ($tablet) {
+        padding-left: 1em; 
+        padding-right: 1em; 
+    }
+
+    @include mq-max ($mobile) {
+        width: 100%; 
+    }
+
+    .blog-thumbnail {
+        img {
+            display: block;
+        }
+    }
+
+    .blog-brief  {
+        background-color: #ffffff;
+        margin-top: -25px; 
+        padding: 1.5em;
+        margin-left: 1em; 
+        margin-right: 1em; 
+        position: relative; 
+
+        @include mq-max ($desktop-small) {
+            padding: 1em; 
+        }
+    }
+
+    &.blog-post {
+        .post-meta { 
+            > div {
+                display: inline-block;
+            }
+            margin-bottom: 0.375em; 
+            a { 
+                color: $gray; 
+                &:hover {
+                    color:$red;
+                }
+            }
+
+
+        }
+
+        .post-taxonomy {
+            font-size: pxToEm(14);
+        }
+
+        .post-title {
+            font-size: pxToEm(20);
+            margin-bottom: 0.375em; 
+            > a {
+                color: $black; 
+                &:hover {
+                    color:$red;
+                }
+            }
+
+            @include mq-max ($desktop-small) {
+                font-size: pxToEm(18);
+            }
+        }
+
+        .post-excerpt {
+            margin-bottom: 0.5em; 
+            font-size: pxToEm(14);
+        }
+
+        .read-more {
+            display: block; text-align:right ;
+            font-size: pxToEm(14);
+            text-transform: uppercase; 
+            color: $gray; 
+                &:hover {
+                    color:$red;
+                }
+        }
+    }
+}
 
 .blog-post {
     .post-meta {
