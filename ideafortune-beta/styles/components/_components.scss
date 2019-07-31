@@ -8,7 +8,7 @@
 @import "footer";
 @import "inner-pages";
 @import "video";
-
+@import "blog";
 
 
 .section-type-a {
@@ -40,6 +40,14 @@
 
 .section-has-gab-tablet {
     @include mq-max ($tablet) {
+        margin-left: 1.5em;
+        margin-right: 1.5em; 
+    }
+}
+
+
+.section-has-gab-desktop-only {
+    @include mq-min ($tablet) {
         margin-left: 1.5em;
         margin-right: 1.5em; 
     }

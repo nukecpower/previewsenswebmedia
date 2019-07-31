@@ -17,6 +17,23 @@ $(document).ready(function () {
     ]
   });
 
+  $(".featured-posts-slides").owlCarousel({
+    loop: true,
+    margin: 0,
+    nav: true,
+    items: 1,
+    dots: false,
+    lazyLoad: true,
+    center: true,
+    autoplay: true,
+    autoplayTimeout: 3000,
+    autoplayHoverPause: true,
+    navText: [
+      "<i class='fas fa-chevron-left'></i>",
+      "<i class='fas fa-chevron-right'></i>"
+    ]
+  });
+
   var featuresCarousel = $(".system-features-slides").owlCarousel({
     loop: true,
     margin: 0,
