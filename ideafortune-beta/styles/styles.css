@@ -17742,7 +17742,7 @@ video {
 .featured-posts-wrapper .owl-nav {
   position: absolute;
   top: 1em;
-  right: 1em;
+  right: 0;
   border: 1px solid #ddd;
   background-color: rgba(255, 255, 255, 0.95);
   margin: 0;
@@ -18046,6 +18046,224 @@ video {
 
 .blog-post .read-more {
   font-weight: 300;
+}
+
+.blog-navbar {
+  margin: 2em 0;
+}
+
+@media screen and (max-width: 1215px) {
+  .blog-navbar {
+    margin-left: 1.5em;
+    margin-right: 1.5em;
+  }
+}
+
+.blog-navbar .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.blog-navbar .blog-search {
+  width: 400px;
+}
+
+@media screen and (max-width: 1215px) {
+  .blog-navbar .blog-search {
+    width: 300px;
+  }
+}
+
+@media screen and (max-width: 960px) {
+  .blog-navbar .blog-search {
+    width: auto;
+  }
+}
+
+.blog-navbar .blog-search.opensearch .search-icon {
+  display: none;
+}
+
+.blog-navbar .blog-search.opensearch .blog-search-wrapper {
+  right: 0;
+}
+
+.blog-navbar .blog-categories {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.blog-navbar .blog-categories ul {
+  margin: 0;
+  padding: 0;
+}
+
+.blog-navbar .blog-categories ul li {
+  display: inline-block;
+  position: relative;
+}
+
+@media screen and (min-width: 1216px) {
+  .blog-navbar .blog-categories ul li {
+    font-size: 1.125em;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .blog-navbar .blog-categories ul li {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .blog-navbar .blog-categories ul li.has-sub-menu {
+    display: block;
+  }
+}
+
+.blog-navbar .blog-categories ul li.has-sub-menu > span:first-child {
+  display: none;
+}
+
+@media screen and (max-width: 800px) {
+  .blog-navbar .blog-categories ul li.has-sub-menu > span:first-child {
+    display: inline;
+  }
+}
+
+.blog-navbar .blog-categories ul li.has-sub-menu:hover .sub-menu-outer {
+  display: block;
+}
+
+.blog-navbar .blog-categories ul li.has-sub-menu li {
+  font-size: 0.88889em;
+  display: block;
+}
+
+.blog-navbar .blog-categories ul li.has-sub-menu li a {
+  padding: .5em 1em;
+}
+
+.blog-navbar .blog-categories ul li a {
+  color: #111;
+  display: block;
+  padding: .75em 1em;
+}
+
+.blog-navbar .blog-categories ul li a:hover {
+  color: #C62828;
+}
+
+.blog-navbar .blog-categories ul li .dots-more {
+  width: 50px;
+  padding: .75em 1em;
+  display: block;
+}
+
+@media screen and (max-width: 800px) {
+  .blog-navbar .blog-categories ul li .dots-more {
+    display: inline-block;
+  }
+}
+
+.blog-navbar .blog-categories ul li.current:after {
+  content: '';
+  height: 2px;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-color: #C62828;
+}
+
+.blog-navbar .sub-menu-outer {
+  padding: 0.5em;
+  -webkit-box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.3);
+          box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.3);
+  position: absolute;
+  top: 100%;
+  width: auto;
+  display: none;
+  z-index: 100;
+  background-color: #ffffff;
+  width: 270px;
+}
+
+.blog-search-trigger {
+  height: 50px;
+  color: #444;
+  font-size: 1.375em;
+  border-radius: 25px;
+  padding: 0 1.25em;
+  line-height: 50px;
+  display: inline-block;
+  background-color: #efefef;
+}
+
+.blog-search-wrapper {
+  background-color: #efefef;
+  height: 50px;
+  border-radius: 25px;
+  padding-left: 20px;
+  position: relative;
+  -webkit-transition: all .5s;
+  transition: all .5s;
+}
+
+@media screen and (max-width: 960px) {
+  .blog-search-wrapper {
+    position: absolute;
+    right: -300px;
+  }
+}
+
+.blog-search-wrapper input[type=search] {
+  border: none;
+  background: transparent;
+  height: 50px;
+  width: 100%;
+  padding-right: 60px;
+  font-size: 1em;
+  line-height: 48px;
+  -webkit-transition: all .5s;
+  transition: all .5s;
+}
+
+.blog-search-wrapper label {
+  display: block;
+  width: 100%;
+}
+
+.blog-search-wrapper button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 50px;
+  width: 70px;
+  padding: 0;
+  background: transparent;
+  border: none;
+  font-size: 22px;
+  color: #444;
+}
+
+.search-icon {
+  height: 50px;
+  width: 80px;
+  display: block;
+  background-color: #efefef;
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 22px;
+  color: #444;
+  border-radius: 25px;
+  line-height: 50px;
+  cursor: pointer;
+  z-index: 10;
+  text-align: center;
 }
 
 .section-type-a {

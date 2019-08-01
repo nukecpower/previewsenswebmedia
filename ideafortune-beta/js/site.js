@@ -59,4 +59,23 @@ $(document).ready(function () {
   $("#arrow").click(function () {
     $.fn.pagepiling.moveSectionDown();
   });
+
+
+  $(".search-icon").click(function (e) {
+    var p = $(this).parent();
+
+    p.toggleClass('opensearch');
+    e.stopPropagation();
+  });
+
+
+  $(".has-sub-menu").mouseover(function () {
+    $(this).toggleClass('active');
+  });
+
+  $(document).click(function (e) {
+    if (($(e.target).parents(".blog-search").length === 0) && ($('.blog-search').hasClass('opensearch'))) {
+      $('.blog-search').removeClass('opensearch');
+    }
+  });
 });
