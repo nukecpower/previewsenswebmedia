@@ -18063,6 +18063,7 @@ video {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  overflow: hidden;
 }
 
 .blog-navbar .blog-search {
