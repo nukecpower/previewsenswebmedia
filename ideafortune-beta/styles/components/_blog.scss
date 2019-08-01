@@ -301,7 +301,7 @@
 
     .container {
         display: flex; 
-        overflow: hidden; 
+        
     }
 
     .blog-search {
@@ -320,7 +320,7 @@
             }
 
             .blog-search-wrapper {
-                right: 0; 
+               opacity: 1; 
             }
         }
     }
@@ -349,6 +349,12 @@
                         display: none; 
                         @include mq-max ($tablet) {
                             display: inline; 
+                        }
+                    }
+
+                    &.active {
+                        .sub-menu-outer {
+                            display: block; 
                         }
                     }
                     &:hover {
@@ -432,7 +438,8 @@
     transition: all .5s; 
     @include mq-max(960px) {
         position: absolute; 
-        right: -300px; 
+        opacity: 0; 
+        right:0; 
     }
 
     input[type=search] {
