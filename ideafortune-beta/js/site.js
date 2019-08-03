@@ -77,5 +77,9 @@ $(document).ready(function () {
     if (($(e.target).parents(".blog-search").length === 0) && ($('.blog-search').hasClass('opensearch'))) {
       $('.blog-search').removeClass('opensearch');
     }
+    if (($(e.target).parents(".has-sub-menu").length === 0) && ($('.has-sub-menu').hasClass('active'))) {
+      $('.has-sub-menu').removeClass('active');
+    }
+
   });
 });

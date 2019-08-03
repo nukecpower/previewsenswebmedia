@@ -66,6 +66,8 @@
     }
   }
   
+
+  
   .get-started-wrapper {
     padding-left: 3.5em; 
     padding-right: 0em; 
@@ -106,7 +108,7 @@
     }
   }
   
-  .get-started-form {
+  .form-wrapper {
     display: flex; 
     flex-wrap: wrap; 
   
@@ -177,6 +179,7 @@
     }
   
     input[type="text"],
+    input[type="url"],
     input[type="email"],
     input[type="password"] {
       padding: 1em 0 .5em 0; 
@@ -185,6 +188,26 @@
       z-index: 2; 
       font-size: pxToEm(18);
       border:none; 
+      &:not(:placeholder-shown) {
+        padding-top: 1.25em; 
+        padding-bottom: 0.25em;
+      }
+      &:not(:placeholder-shown) + label {
+        top: 4px; 
+        transform: translateY(0);
+        opacity: 1; 
+      }
+    }
+
+    textarea { 
+      padding: 1em 0 .5em 0; 
+      background: transparent; 
+      position: relative; 
+      z-index: 2; 
+      font-size: pxToEm(18);
+      border:none; 
+      width: 100%; 
+      resize: none; 
       &:not(:placeholder-shown) {
         padding-top: 1.25em; 
         padding-bottom: 0.25em;
